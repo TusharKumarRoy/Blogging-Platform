@@ -51,3 +51,13 @@ if (!function_exists('esc')) {
             <?php endforeach; ?>
         <?php endif; ?>
     </section>
+
+    <!-- Navbar -->
+<nav class="navbar">
+    <div class="logo">MyPremiumBlog</div>
+    <ul class="nav-links">
+        <li><a href="index.php">Home</a></li>
+        <li><a href="#">Categories</a></li>
+        <li><a href="#">About</a></li>
+    </ul>
+</nav>
