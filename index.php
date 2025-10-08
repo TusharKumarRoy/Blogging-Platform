@@ -17,3 +17,8 @@
             </a>
         <?php endforeach; ?>
     </section>
+
+     <!-- Blog List -->
+    <div class="blog-section">
+        <!-- Placeholder for JS-driven dynamic content -->
+        <div id="dynamic-content" aria-live="polite"></div>
