@@ -38,7 +38,7 @@
     display: flex;
     gap: 2.5rem;
     margin-bottom: 2.5rem;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
@@ -52,7 +52,7 @@
     box-shadow: 0 2px 12px rgba(45,90,61,0.08);
     min-width: 220px;
     max-width: 300px;
-    flex: 1 1 0;
+    flex: 1 1 280px;
 }
 .member img {
     width: 80px;
@@ -119,4 +119,73 @@
 .member a:hover::after {
     opacity: 1;
     bottom: -8px;
+}
+
+/* Team Section Responsive Styles */
+@media (max-width: 1024px) {
+    .team {
+        gap: 2rem;
+    }
+    
+    .member {
+        flex: 1 1 250px;
+        max-width: 280px;
+        padding: 1.8rem 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .team {
+        gap: 1.5rem;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .member {
+        flex: none;
+        width: 100%;
+        max-width: 400px;
+        padding: 2rem 1.5rem;
+    }
+    
+    .member img {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 1.2rem;
+    }
+    
+    .member h3 {
+        font-size: 1.3rem;
+        margin-bottom: 0.6rem;
+    }
+    
+    .member p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .team {
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .member {
+        padding: 1.5rem 1rem;
+        border-radius: 12px;
+    }
+    
+    .member img {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 1rem;
+    }
+    
+    .member h3 {
+        font-size: 1.2rem;
+    }
+    
+    .member p {
+        font-size: 1rem;
+    }
 }
