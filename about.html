@@ -14,9 +14,14 @@
     <header class="header">
         <nav class="navbar">
             <div class="logo">OpenBlogs</div>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <ul class="nav-links nav-center">
                 <li><a href="index.html">Home</a></li>
-                <li class="nav-dropdown">
+                                <li class="nav-dropdown">
                     <a href="#" class="dropdown-toggle">Categories</a>
                     <ul class="dropdown-menu">
                         <li><a href="#">JavaScript</a></li>
@@ -120,6 +125,21 @@
         </div>
         <div class="footer-copyright">© 2025 OpenBlogs | All rights reserved.</div>
     </footer>
+
+    <script>
+        // Mobile menu toggle function
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('.nav-links').classList.remove('active');
+            });
+        });
+    </script>
 </body>
 
 </html>
