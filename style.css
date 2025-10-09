@@ -1,3 +1,9 @@
+/* Reset */
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
 /* Blog Grid */
 .blog-container {
   display: grid;
@@ -69,6 +75,21 @@ body {
   color: white;
 }
 
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(to right, #111, #333);
+  color: white;
+}
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+.hero p {
+  font-size: 1.2rem;
+  color: #ddd;
+}
 /* Category Buttons */
 .cat-btn {
   background: #eee;
@@ -86,3 +107,4 @@ body {
   background: #111;
   color: white;
 }
+
