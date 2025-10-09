@@ -70,3 +70,9 @@ function renderBlogs(filterCategory = "All") {
         container.appendChild(card);
     });
 }
+
+//format date helper function
+function formatDate(dateStr) {
+    const options = { year: "numeric", month: "short", day: "numeric" };
+    return new Date(dateStr).toLocaleDateString(undefined, options);
+}
