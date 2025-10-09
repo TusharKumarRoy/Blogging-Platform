@@ -77,3 +77,141 @@ if (!function_exists('esc')) {
     </div>
   </section>
 </main>
+
+<style>
+/* about.css — scoped styles for About page */
+
+/* Theme tokens (override or use values from style.css if present) */
+:root {
+  --bg: #f5f7fa;
+  --card-bg: #ffffff;
+  --muted: #666;
+  --text: #222;
+  --accent: #ff9800;
+  --radius: 12px;
+  --space-sm: 0.75rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+}
+
+/* Page root */
+.about-page {
+  background: transparent; /* leave page background to global style */
+  color: var(--text);
+  padding: var(--space-lg) 1rem;
+  min-height: 60vh;
+}
+
+/* HERO */
+.about-page .hero {
+  text-align: center;
+  padding: var(--space-lg) var(--space-md);
+  border-radius: calc(var(--radius) - 2px);
+  background: linear-gradient(90deg, rgba(17,17,17,0.95), rgba(51,51,51,0.95));
+  color: #fff;
+  margin-bottom: var(--space-lg);
+}
+.about-page .hero h1 {
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  line-height: 1.08;
+  margin-bottom: 0.5rem;
+}
+.about-page .hero p {
+  color: #e6e6e6;
+  margin: 0 auto;
+  max-width: 900px;
+  font-size: 1.05rem;
+}
+
+/* MAIN SECTIONS (Story / Mission) */
+.about-page .container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.about-page .about-section,
+.about-page .mission {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: var(--space-md);
+  box-shadow: 0 6px 18px rgba(14, 20, 25, 0.06);
+  margin-bottom: var(--space-md);
+}
+.about-page h2, 
+.about-page h3 {
+  color: var(--text);
+  margin: 0 0 0.5rem 0;
+  font-weight: 600;
+}
+.about-page p {
+  color: var(--muted);
+  line-height: 1.6;
+  margin: 0.5rem 0 0;
+}
+
+/* TEAM GRID */
+.about-page .team {
+  margin-top: var(--space-md);
+}
+.about-page .team-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin-top: 1rem;
+}
+.about-page .team-card {
+  background: var(--card-bg);
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 220px;
+}
+.about-page .team-card img {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 0.6rem;
+  background: #eee; /* shows if image missing */
+}
+.about-page .team-card h4 { margin: 0.25rem 0; font-size: 1rem; color: var(--text); }
+.about-page .team-card p.role { color: var(--muted); font-size: 0.9rem; margin: .25rem 0; }
+.about-page .team-card p.bio { margin-top: 0.5rem; color: var(--muted); font-size: 0.9rem; }
+
+/* CONTACT / CTA */
+.about-page .contact-cta {
+  margin-top: var(--space-md);
+  padding: var(--space-md);
+  background: #fff8f2;
+  border-radius: 10px;
+  border: 1px solid rgba(255,152,0,0.08);
+}
+.about-page .contact-cta a,
+.about-page .contact-cta .btn {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* Focus accessibility */
+.about-page a:focus,
+.about-page button:focus {
+  outline: 3px solid rgba(255,152,0,0.18);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* Small screens: tighten spacing */
+@media (max-width: 480px) {
+  .about-page { padding: 1rem 0.75rem; }
+  .about-page .hero { padding: 1.25rem; }
+  .about-page .team-card { min-height: 200px; padding: 0.85rem; }
+}
+</style>
+
+</body>
+</html>
