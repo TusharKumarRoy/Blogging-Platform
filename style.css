@@ -45,3 +45,44 @@
   margin-bottom: 0.5rem;
   display: block;
 }
+
+body {
+  background: #f5f7fa;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  background: #111;
+  color: white;
+}
+.nav-links a {
+  color: white;
+}
+.nav-links a:hover {
+  color: #ff9800;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(to right, #111, #333);
+  color: white;
+}
+
+/* Category Buttons */
+.cat-btn {
+  background: #eee;
+}
+.cat-btn:hover {
+  background: #ddd;
+}
+.cat-btn.active {
+  background: #ff9800;
+  color: white;
+}
+
+/* Footer */
+.footer {
+  background: #111;
+  color: white;
+}
