@@ -91,3 +91,22 @@ if (document.getElementById("blog-container")) {
         });
     });
 }
+
+// Render blog details on blog page
+if (document.getElementById("blog-details")) {
+    const params = new URLSearchParams(window.location.search);
+    const id = parseInt(params.get("id"));
+    const blog = blogs.find(b => b.id === id);
+
+    if (blog) {
+        document.getElementById("blog-details").innerHTML = `
+        <img src="${blog.image}" alt="${blog.title}">
+        <h2>${blog.title}</h2>
+        <p class="meta">${blog.category} • ${formatDate(blog.publishedAt)}</p>
+        <p class="intro">${blog.intro}</p>
+        <p>${blog.content}</p>
+      `;
+    } else {
+        document.getElementById("blog-details").innerHTML = `<p>Blog not found!</p>`;
+    }
+}
