@@ -24,3 +24,8 @@ if (!function_exists('esc')) {
     <li><a class="active" href="about.php">About</a></li>
   </ul>
 </nav>
+
+<section class="hero">
+  <h1>About My Premium Blog</h1>
+  <p>Learn who we are, what we do, and how we help readers build better things.</p>
+</section>
