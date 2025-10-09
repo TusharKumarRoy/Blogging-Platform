@@ -82,8 +82,14 @@ if (!function_exists('esc')) {
     </div>
   </section>
 </main>
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 MyPremiumBlog | All rights reserved.</p>
+  </footer>
 
-<style>
+  <script src="script.js"></script>
+
+  <style>
 /* about.css — scoped styles for About page */
 
 /* Theme tokens (override or use values from style.css if present) */
