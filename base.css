@@ -1,0 +1,189 @@
+/* base.css: shared header and footer styles for all pages */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f0f8f5 0%, #e8f5e8 100%);
+    color: #2d5a3d;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.header {
+    background: linear-gradient(135deg, #2d5a3d 0%, #4a7c59 100%);
+    box-shadow: 0 4px 15px rgba(45, 90, 61, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    min-height: 70px;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 5%;
+    color: white;
+    position: relative;
+    min-height: 70px;
+}
+.logo {
+    font-size: 1.7rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2.7rem;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    position: relative;
+    left: 0;
+}
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    font-size: 1.22rem;
+    padding: 0.5rem 1.2rem;
+    border-radius: 6px;
+}
+.nav-links a:hover {
+    background: rgba(144, 238, 144, 0.2);
+    color: #90ee90;
+    transform: translateY(-1px);
+}
+ 
+
+/*css for catagory dropdown*/
+
+.nav-dropdown {
+    position: relative;
+}
+.dropdown-toggle::after {
+    content: "  ▼";
+    font-size: 0.8em;
+    vertical-align: middle;
+}
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) scaleY(0.95);
+    top: calc(100% + 2px);
+    min-width: 240px;
+    width: max-content;
+    max-width: 350px;
+    background: #fff;
+    color: #20522d;
+    border-radius: 10px;
+    border: 2px solid #2d5a3d;
+    box-shadow: 0 12px 32px rgba(45,90,61,0.22), 0 2px 8px rgba(45,90,61,0.10);
+    padding: 0.7rem 0;
+    z-index: 2000;
+    margin-top: 0;
+    opacity: 0;
+    transition: opacity 0.18s ease, transform 0.18s ease;
+    white-space: nowrap;
+}
+.dropdown-menu li {
+    list-style: none;
+}
+.dropdown-menu a {
+    display: block;
+    color: #20522d !important;
+    font-weight: 700;
+    padding: 0.7rem 1.2rem;
+    text-decoration: none;
+    font-size: 1.08rem;
+    border-radius: 4px;
+    background: transparent;
+    opacity: 1 !important;
+    transition: background 0.2s, color 0.2s;
+}
+.dropdown-menu a:hover {
+    background: #e8f5e8;
+    color: #1a3c22 !important;
+    opacity: 1 !important;
+}
+
+.dropdown-menu * {
+    opacity: 1 !important;
+    color: #20522d !important;
+}
+.nav-dropdown:hover .dropdown-menu,
+.nav-dropdown:focus-within .dropdown-menu {
+    display: block;
+    opacity: 1;
+    transform: translateX(-50%) scaleY(1);
+}
+
+
+.mega-footer {
+    background: #1a3323;
+    color: #f5f5fa;
+    padding: 3rem 0 2rem 0;
+    font-size: 1rem;
+    margin-top: 3rem;
+}
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2.5rem;
+    justify-content: space-between;
+}
+.footer-col {
+    flex: 1 1 180px;
+    min-width: 180px;
+    margin-bottom: 2rem;
+}
+.brand-col {
+    flex: 1.5 1 220px;
+    min-width: 220px;
+}
+.footer-logo {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+    letter-spacing: -1px;
+}
+.footer-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #bdbdcf;
+    margin-bottom: 1.1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.footer-col a {
+    display: block;
+    color: #f5f5fa;
+    text-decoration: none;
+    margin-bottom: 0.7rem;
+    transition: color 0.2s;
+    font-size: 1rem;
+}
+.footer-col a:hover {
+    color: #90ee90;
+}
+.footer-copyright {
+    color: #bdbdcf;
+    font-size: 0.98rem;
+    margin-bottom: 1.2rem;
+    margin-top: 2.5rem;
+    text-align: center;
+    width: 100%;
+}
