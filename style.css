@@ -68,6 +68,11 @@ body {
 .nav-links a:hover {
   color: #ff9800;
 }
+/* Active nav link */
+.nav-links a.active {
+  color: #ff9800;
+  font-weight: 600;
+}
 
 /* Hero */
 .hero {

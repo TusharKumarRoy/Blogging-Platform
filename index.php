@@ -18,9 +18,10 @@ if (!function_exists('esc')) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
     <title>My Premium Blog</title>
-
+</head>
+<body>
 
  <!-- Category Filter -->
     <section class="categories">
@@ -65,9 +66,9 @@ if (!function_exists('esc')) {
 <nav class="navbar">
     <div class="logo">MyPremiumBlog</div>
     <ul class="nav-links">
-        <li><a href="index.php">Home</a></li>
+        <li><a class="active" href="index.php">Home</a></li>
         <li><a href="#">Categories</a></li>
-        <li><a href="#">About</a></li>
+        <li><a href="about.php">About</a></li>
     </ul>
 </nav>
 
@@ -85,5 +86,5 @@ if (!function_exists('esc')) {
 
     <script src="script.js"></script>
 
-    </head>
-<body>
+</body>
+</html>
