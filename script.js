@@ -36,3 +36,37 @@ const blogs = [{
         image: "https://i.pinimg.com/736x/da/40/4b/da404bf7bd4398c9f256c65507d3c860.jpg"
     }
 ];
+
+// Function to render blogs dynamically
+function renderBlogs(filterCategory = "All") {
+    const container = document.getElementById("blog-container");
+    if (!container) return;
+
+    container.innerHTML = ""; // Clear previous blogs
+
+    const filteredBlogs = filterCategory === "All" ?
+        blogs :
+        blogs.filter(blog => blog.category === filterCategory);
+
+    if (filteredBlogs.length === 0) {
+        container.innerHTML = `<p>No blogs found in this category.</p>`;
+        return;
+    }
+
+    filteredBlogs.forEach(blog => {
+        const card = document.createElement("div");
+        card.className = "blog-card";
+        card.innerHTML = `
+        <img src="${blog.image}" alt="${blog.title}">
+        <div class="content">
+          <span class="meta">${blog.category} • ${formatDate(blog.publishedAt)}</span>
+          <h3>${blog.title}</h3>
+          <p>${blog.intro}</p>
+        </div>
+      `;
+        card.onclick = () => {
+            window.location.href = `blog.html?id=${blog.id}`;
+        };
+        container.appendChild(card);
+    });
+}
