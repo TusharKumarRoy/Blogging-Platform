@@ -76,3 +76,18 @@ function formatDate(dateStr) {
     const options = { year: "numeric", month: "short", day: "numeric" };
     return new Date(dateStr).toLocaleDateString(undefined, options);
 }
+
+// Initialize blog list
+if (document.getElementById("blog-container")) {
+    renderBlogs();
+
+    // Category button click events
+    document.querySelectorAll(".cat-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+            document.querySelectorAll(".cat-btn").forEach(b => b.classList.remove("active"));
+            btn.classList.add("active");
+            const category = btn.getAttribute("data-category");
+            renderBlogs(category);
+        });
+    });
+}
