@@ -35,6 +35,42 @@ const blogs = [
         intro: "Master the art of creating websites that look great on every device with these proven responsive design techniques.",
         content: "Responsive design is no longer optional—it's essential. With the variety of devices and screen sizes available today, creating flexible, adaptive layouts is crucial for user experience and SEO. We'll cover mobile-first design principles, breakpoint strategies, flexible images, and modern CSS techniques like container queries that make responsive design more intuitive and powerful than ever.",
         image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=400&fit=crop"
+    },
+    {
+        id: 5,
+        title: "Getting Started with TypeScript",
+        publishedAt: "2025-09-20",
+        category: "TypeScript",
+        intro: "TypeScript brings type safety and modern features to JavaScript. Learn how to get started and why you should use it.",
+        content: "TypeScript is a superset of JavaScript that adds static typing and powerful tooling. This article covers the basics of TypeScript, how to set up a project, and the benefits of using types for large-scale applications.",
+        image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=400&fit=crop"
+    },
+    {
+        id: 6,
+        title: "10 Must-Know VS Code Extensions",
+        publishedAt: "2025-09-15",
+        category: "Productivity",
+        intro: "Boost your productivity with these essential Visual Studio Code extensions for web developers.",
+        content: "VS Code's extension ecosystem is vast. Here are 10 extensions that will help you write code faster, debug more easily, and stay organized.",
+        image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&h=400&fit=crop"
+    },
+    {
+        id: 7,
+        title: "A Guide to Web Accessibility",
+        publishedAt: "2025-09-10",
+        category: "Accessibility",
+        intro: "Make your websites usable for everyone by following these accessibility best practices.",
+        content: "Accessibility is about making your site usable for people of all abilities. Learn about semantic HTML, ARIA roles, color contrast, and keyboard navigation.",
+        image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&h=400&fit=crop"
+    },
+    {
+        id: 8,
+        title: "Deploying Your Site with Netlify",
+        publishedAt: "2025-09-01",
+        category: "Deployment",
+        intro: "Learn how to deploy static sites quickly and easily using Netlify’s powerful platform.",
+        content: "Netlify offers continuous deployment, serverless functions, and instant rollbacks. This guide walks you through connecting your repo and going live in minutes.",
+        image: "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?w=800&h=400&fit=crop"
     }
 ];
 
