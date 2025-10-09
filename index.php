@@ -61,3 +61,9 @@ if (!function_exists('esc')) {
         <li><a href="#">About</a></li>
     </ul>
 </nav>
+
+<!-- Hero -->
+<section class="hero">
+    <h1>Welcome to My Premium Blog</h1>
+    <p>Insights, stories, and tutorials crafted with passion.</p>
+</section>
