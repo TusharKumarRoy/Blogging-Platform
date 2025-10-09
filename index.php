@@ -12,6 +12,15 @@ if (!function_exists('esc')) {
     }
 }
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <title>My Premium Blog</title>
+
 
  <!-- Category Filter -->
     <section class="categories">
@@ -67,3 +76,14 @@ if (!function_exists('esc')) {
     <h1>Welcome to My Premium Blog</h1>
     <p>Insights, stories, and tutorials crafted with passion.</p>
 </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2025 MyPremiumBlog | All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+    </head>
+<body>
