@@ -1,77 +1,8 @@
-/* Basic Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #f0f8f5 0%, #e8f5e8 100%);
-    color: #2d5a3d;
-    line-height: 1.6;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-/* Header */
-.header {
-    background: linear-gradient(135deg, #2d5a3d 0%, #4a7c59 100%);
-    box-shadow: 0 4px 15px rgba(45, 90, 61, 0.2);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 5%;
-    color: white;
-}
-
-.logo {
-    font-size: 1.8rem;
-    font-weight: 700;
-    letter-spacing: -0.5px;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 2.5rem;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    font-weight: 500;
-    padding: 0.5rem 1rem;
-    border-radius: 6px;
-}
-
-.nav-links a:hover {
-    background: rgba(144, 238, 144, 0.2);
-    color: #90ee90;
-    transform: translateY(-1px);
-}
-
-/* Main Content */
-.main-content {
-    flex: 1;
-    padding: 2rem 0;
-}
-
-/* Blog Details Section */
 .blog-details {
     max-width: 900px;
     margin: 4rem auto;
     padding: 0 2rem;
 }
-
 .blog-details img {
     width: 100%;
     border-radius: 20px;
@@ -80,7 +11,6 @@ body {
     max-height: 450px;
     box-shadow: 0 10px 30px rgba(45, 90, 61, 0.15);
 }
-
 .blog-details h2 {
     font-size: 3rem;
     margin-bottom: 1.5rem;
@@ -89,7 +19,6 @@ body {
     line-height: 1.2;
     text-align: center;
 }
-
 .blog-details .meta {
     font-size: 1rem;
     color: #4a7c59;
@@ -100,7 +29,6 @@ body {
     text-transform: uppercase;
     letter-spacing: 1px;
 }
-
 .blog-details .intro {
     font-size: 1.3rem;
     font-style: italic;
@@ -114,7 +42,6 @@ body {
     box-shadow: 0 5px 15px rgba(45, 90, 61, 0.08);
     border-left: 4px solid #90ee90;
 }
-
 .blog-details p {
     line-height: 1.9;
     color: #2d5a3d;
@@ -125,14 +52,12 @@ body {
     border-radius: 16px;
     box-shadow: 0 5px 15px rgba(45, 90, 61, 0.08);
 }
-
 /* Related Blogs Section */
 .related-blogs-section {
     max-width: 1200px;
     margin: 6rem auto 4rem;
     padding: 0 2rem;
 }
-
 .section-title {
     font-size: 2.5rem;
     margin-bottom: 3rem;
@@ -141,7 +66,6 @@ body {
     text-align: center;
     position: relative;
 }
-
 .section-title::after {
     content: '';
     position: absolute;
@@ -153,14 +77,12 @@ body {
     background: linear-gradient(135deg, #90ee90, #4a7c59);
     border-radius: 2px;
 }
-
 .related-blogs {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2.5rem;
     margin-top: 2rem;
 }
-
 .related-blog-card {
     background: rgba(255, 255, 255, 0.95);
     border-radius: 20px;
@@ -170,28 +92,23 @@ body {
     transition: all 0.4s ease;
     border: 1px solid rgba(144, 238, 144, 0.2);
 }
-
 .related-blog-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 15px 40px rgba(45, 90, 61, 0.2);
     border-color: #90ee90;
 }
-
 .related-blog-card img {
     width: 100%;
     height: 220px;
     object-fit: cover;
     transition: transform 0.4s ease;
 }
-
 .related-blog-card:hover img {
     transform: scale(1.05);
 }
-
 .related-blog-card .content {
     padding: 2rem;
 }
-
 .related-blog-card h3 {
     font-size: 1.4rem;
     margin-bottom: 1rem;
@@ -199,7 +116,6 @@ body {
     font-weight: 700;
     line-height: 1.3;
 }
-
 .related-blog-card p {
     color: #4a7c59;
     font-size: 1rem;
@@ -209,7 +125,6 @@ body {
     padding: 0;
     box-shadow: none;
 }
-
 .related-blog-card .meta {
     font-size: 0.9rem;
     color: #6b8e5a;
@@ -219,16 +134,4 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.5px;
     text-align: left;
-}
-
-/* Footer */
-.footer {
-    background: linear-gradient(135deg, #2d5a3d 0%, #4a7c59 100%);
-    color: white;
-    text-align: center;
-    padding: 2.5rem 1rem;
-    font-weight: 500;
-    letter-spacing: 0.5px;
-    margin-top: auto;
-    box-shadow: 0 -4px 15px rgba(45, 90, 61, 0.2);
 }
