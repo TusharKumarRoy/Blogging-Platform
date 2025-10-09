@@ -75,6 +75,11 @@ if (!function_exists('esc')) {
         We are collaborating with perseverance and dedication. Our clear vision is to build a platform that helps users discover, read, and engage with quality blog content. By centralizing content creation with admins, we strike a balance between content quality control and community discussion.
       </p>
     </div>
+
+    <div class="contact-cta" aria-labelledby="contact-heading">
+      <h3 id="contact-heading">Contribute</h3>
+      <p>Interested in writing for the blog? Email <a href="mailto:hello@example.com">hello@example.com</a></p>
+    </div>
   </section>
 </main>
 
