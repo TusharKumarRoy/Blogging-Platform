@@ -108,3 +108,54 @@ body {
   color: white;
 }
 
+/* Theme tokens + breakpoints */
+:root{
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --radius: 12px;
+
+  --break-sm: 480px;  /* phones */
+  --break-md: 768px;  /* tablets */
+  --break-lg: 1024px; /* small desktops */
+}
+
+/* Centered container for large screens */
+.container {
+  width: 100%;
+  padding: 0 1rem;
+  margin: 0 auto;
+  max-width: 1100px;
+}
+
+/* Small screens: reduce hero size and grid spacing */
+@media (max-width: 479px) {
+  .hero {
+    padding: 2.5rem 1rem;
+  }
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+  .blog-container {
+    gap: 1rem;
+    padding: 1.25rem;
+  }
+  .cat-btn {
+    padding: 0.45rem 0.8rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Tablet: slightly larger text, fewer columns minimum */
+@media (min-width: 480px) and (max-width: 767px) {
+  .hero h1 { font-size: 2rem; }
+  .blog-container { padding: 1.5rem; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+}
+
+/* Desktop: constrain width and increase spacing */
+@media (min-width: 768px) {
+  .hero h1 { font-size: 2.4rem; }
+  .blog-container { padding: 3rem; gap: 2rem; }
+  .container { padding: 0 2rem; }
+}
+
