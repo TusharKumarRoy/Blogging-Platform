@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Details</title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="blog-style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">OpenBlogs</div>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links nav-center">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+        <!-- Blog Details Section -->
+        <section class="blog-details" id="blog-details"></section>
+        <!-- Related Blogs Section -->
+        <section class="related-blogs-section">
+            <h2 class="section-title">Blogs You May Like</h2>
+            <div class="related-blogs" id="related-blogs">Related Blogs Appear Here</div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+        <footer class="footer mega-footer">
+            <div class="footer-container">
+                <div class="footer-col brand-col">
+                    <div class="footer-logo">OpenBlogs</div>
+                </div>
+                <div class="footer-col">
+                    <div class="footer-title">BLOG</div>
+                    <a href="index.html">All Blogs</a>
+                    <a href="#">Categories</a>
+                    <a href="#">Popular Posts</a>
+
+                </div>
+                <div class="footer-col">
+                    <div class="footer-title">RESOURCES</div>
+                    <a href="about.html">About</a>
+
+                    <a href="#">Community</a>
+                    <a href="#">Support</a>
+                </div>
+                <div class="footer-col">
+                    <div class="footer-title">COMPANY</div>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">GitHub</a>
+                </div>
+            </div>
+            <div class="footer-copyright">© 2025 OpenBlogs | All rights reserved.</div>
+        </footer>
+    
+    <script src="blog-script.js"></script>
+    <script>
+        // Mobile menu toggle function
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+        
+        // Close mobile menu when a link is clicked
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('.nav-links').classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
