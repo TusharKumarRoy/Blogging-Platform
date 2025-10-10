@@ -72,15 +72,15 @@
   display: block;
 }
 
-body {
-  background: #f5f7fa;
-  color: #333;
+.read-more {
+    margin-top: 0.7rem;
+    background: #4a7c59;
+    color: white;
+    padding: 0.5rem 1.1rem;
+    border-radius: 7px;
+    text-decoration: none;
+    font-weight: 500;
+    align-self: flex-start;
+    font-size: 0.95rem;
+    transition: background 0.3s;
 }
-
-
-/* Footer */
-.footer {
-  background: #111;
-  color: white;
-}
-
