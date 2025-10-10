@@ -103,19 +103,6 @@ document.addEventListener('DOMContentLoaded', function() {
     renderBlogList(); // default shows all
 });
 
-// Initialize blog list
-if (document.getElementById("blog-container")) {
-    renderBlogs();
 
-    // Category button click events
-    document.querySelectorAll(".cat-btn").forEach(btn => {
-        btn.addEventListener("click", () => {
-            document.querySelectorAll(".cat-btn").forEach(b => b.classList.remove("active"));
-            btn.classList.add("active");
-            const category = btn.getAttribute("data-category");
-            renderBlogs(category);
-        });
-    });
-}
 
 
