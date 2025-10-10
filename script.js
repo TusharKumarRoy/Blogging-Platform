@@ -104,6 +104,47 @@ function formatDate(dateStr) {
     return new Date(dateStr).toLocaleDateString(undefined, options);
 }
 
+function renderBlogList(filterCategory = "All") {
+    const blogListContainer = document.getElementById("blog-list");
+    if (!blogListContainer) return;
+
+    blogListContainer.innerHTML = '';
+
+    // optionally filter by category
+    const items = filterCategory === "All" ? blogs : blogs.filter(b => b.category === filterCategory);
+
+    if (items.length === 0) {
+        blogListContainer.innerHTML = `<p class="no-posts">No posts found in this category.</p>`;
+        return;
+    }
+
+    items.forEach(blog => {
+        const card = document.createElement("div");
+        card.className = "blog-card";
+        card.innerHTML = `
+            <img src="${blog.image}" alt="${blog.title}">
+            <div class="content">
+                <span class="meta">${blog.category} • ${formatDate(blog.publishedAt)}</span>
+                <h2>${blog.title}</h2>
+                <p>${blog.intro}</p>
+                <a class="read-more" href="blog.html?id=${blog.id}">Read More</a>
+            </div>
+        `;
+        // Navigate when clicking the card but ignore clicks on internal links
+        card.addEventListener('click', function(e) {
+            if (!e.target.closest('a')) {
+                window.location.href = `blog.html?id=${blog.id}`;
+            }
+        });
+        blogListContainer.appendChild(card);
+    });
+}
+
+// initialize on DOM ready
+document.addEventListener('DOMContentLoaded', function() {
+    renderBlogList(); // default shows all
+});
+
 // Initialize blog list
 if (document.getElementById("blog-container")) {
     renderBlogs();
