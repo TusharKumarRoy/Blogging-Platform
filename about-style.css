@@ -36,7 +36,7 @@
 }
 .team {
     display: flex;
-    gap: 2.5rem;
+    gap: 2rem;
     margin-bottom: 2.5rem;
     flex-wrap: wrap;
     justify-content: center;
@@ -48,7 +48,7 @@
     align-items: center;
     background: #f0f8f5;
     border-radius: 18px;
-    padding: 2rem 2.5rem;
+    padding: 2rem 2rem;
     box-shadow: 0 2px 12px rgba(45,90,61,0.08);
     min-width: 220px;
     max-width: 300px;
@@ -122,9 +122,25 @@
 }
 
 /* Team Section Responsive Styles */
-@media (max-width: 1024px) {
+@media (min-width: 927px) {
     .team {
-        gap: 2rem;
+        flex-wrap: nowrap;
+        gap: 2.5rem;
+        justify-content: center;
+    }
+    
+    .member {
+        flex: 1 1 0;
+        max-width: 320px;
+        padding: 2rem 2.5rem;
+    }
+}
+
+@media (max-width: 926px) and (min-width: 769px) {
+    .team {
+        gap: 1.8rem;
+        max-width: 900px;
+        margin: 0 auto 2.5rem auto;
     }
     
     .member {
