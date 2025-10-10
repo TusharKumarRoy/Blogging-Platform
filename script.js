@@ -64,40 +64,6 @@ const blogs = [{
   }
 ];
 
-// Function to render blogs dynamically
-function renderBlogs(filterCategory = "All") {
-    const container = document.getElementById("blog-container");
-    if (!container) return;
-
-    container.innerHTML = ""; // Clear previous blogs
-
-    const filteredBlogs = filterCategory === "All" ?
-        blogs :
-        blogs.filter(blog => blog.category === filterCategory);
-
-    if (filteredBlogs.length === 0) {
-        container.innerHTML = `<p>No blogs found in this category.</p>`;
-        return;
-    }
-
-    filteredBlogs.forEach(blog => {
-        const card = document.createElement("div");
-        card.className = "blog-card";
-        card.innerHTML = `
-        <img src="${blog.image}" alt="${blog.title}">
-        <div class="content">
-          <span class="meta">${blog.category} • ${formatDate(blog.publishedAt)}</span>
-          <h3>${blog.title}</h3>
-          <p>${blog.intro}</p>
-        </div>
-      `;
-        card.onclick = () => {
-            window.location.href = `blog.html?id=${blog.id}`;
-        };
-        container.appendChild(card);
-    });
-}
-
 //format date helper function
 function formatDate(dateStr) {
     const options = { year: "numeric", month: "short", day: "numeric" };
@@ -109,14 +75,6 @@ function renderBlogList(filterCategory = "All") {
     if (!blogListContainer) return;
 
     blogListContainer.innerHTML = '';
-
-    // optionally filter by category
-    const items = filterCategory === "All" ? blogs : blogs.filter(b => b.category === filterCategory);
-
-    if (items.length === 0) {
-        blogListContainer.innerHTML = `<p class="no-posts">No posts found in this category.</p>`;
-        return;
-    }
 
     items.forEach(blog => {
         const card = document.createElement("div");
@@ -160,21 +118,4 @@ if (document.getElementById("blog-container")) {
     });
 }
 
-// Render blog details on blog page
-if (document.getElementById("blog-details")) {
-    const params = new URLSearchParams(window.location.search);
-    const id = parseInt(params.get("id"));
-    const blog = blogs.find(b => b.id === id);
 
-    if (blog) {
-        document.getElementById("blog-details").innerHTML = `
-        <img src="${blog.image}" alt="${blog.title}">
-        <h2>${blog.title}</h2>
-        <p class="meta">${blog.category} • ${formatDate(blog.publishedAt)}</p>
-        <p class="intro">${blog.intro}</p>
-        <p>${blog.content}</p>
-      `;
-    } else {
-        document.getElementById("blog-details").innerHTML = `<p>Blog not found!</p>`;
-    }
-}
