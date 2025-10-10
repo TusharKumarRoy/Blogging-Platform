@@ -1,62 +1,49 @@
-
-
-/* Blog list (new improved layout) */
 .blog-list {
-  max-width: 1200px;
-  margin: 3rem auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.5rem;
-  padding: 0 1rem;
+    max-width: 1200px;
+    margin: 3rem auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
 }
-
 .blog-card {
-   background: rgba(255, 255, 255, 0.95);
-  border-radius: 16px;
-  box-shadow: 0 4px 16px rgba(45, 90, 61, 0.10);
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s;
-  border: 1px solid rgba(144, 238, 144, 0.12);
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(45, 90, 61, 0.10);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(144, 238, 144, 0.15);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
 }
-
-.blog-card:hover, .blog-card:focus-within {
-  transform: translateY(-8px);
-   box-shadow: 0 15px 40px rgba(45, 90, 61, 0.18);
-  border-color: #90ee90;
-  outline: none;
+.blog-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(45, 90, 61, 0.2);
+    border-color: #90ee90;
 }
-
 .blog-card img {
-  width: 100%;
-  height: 140px;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-  display: block;
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
 }
-.blog-card:hover img,
-.blog-card:focus-within img {
-  transform: scale(1.05);
+.blog-card:hover img {
+    transform: scale(1.05);
 }
-
 .blog-card .content {
- padding: 1.2rem;
+    padding: 1.2rem;
     flex: 1;
     display: flex;
     flex-direction: column;
 }
-
 .blog-card h2 {
-  font-size: 1.1rem;
-  margin-bottom: 0.7rem;
-  color: #2d5a3d;
-  font-weight: 700;
-  line-height: 1.3;
+    font-size: 1.1rem;
+    margin-bottom: 0.7rem;
+    color: #2d5a3d;
+    font-weight: 700;
+    line-height: 1.3;
 }
-
 .blog-card p {
     color: #4a7c59;
     font-size: 0.95rem;
@@ -64,7 +51,6 @@
     margin-bottom: 0.4rem;
     flex: 1;
 }
-
 .blog-card .meta {
     font-size: 0.8rem;
     color: #6b8e5a;
@@ -74,7 +60,6 @@
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
-
 .read-more {
     margin-top: 0.7rem;
     background: #4a7c59;
@@ -87,7 +72,6 @@
     font-size: 0.95rem;
     transition: background 0.3s;
 }
-
 .read-more:hover {
     background: #90ee90;
     color: #2d5a3d;
