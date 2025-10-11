@@ -106,5 +106,21 @@ function renderBlogList() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+     const select = document.getElementById('category-select');
+        const currentCategory = getQueryParam('category') || 'All';
+        if (select) {
+            select.value = currentCategory;
+            select.addEventListener('change', () => {
+                const value = select.value;
+                const url = new URL(window.location.href);
+                if (value && value !== 'All') {
+                    url.searchParams.set('category', value);
+                } else {
+                    url.searchParams.delete('category');
+                }
+                window.location.href = url.toString();
+            });
+        }
     renderBlogList();
+
 });
