@@ -70,6 +70,11 @@ function formatDate(dateStr) {
     return new Date(dateStr).toLocaleDateString(undefined, options);
 }
 
+function getQueryParam(key){
+    const params = new URLSearchParams(window.location.search);
+    return params.get(key);
+}
+
 function renderBlogList() {
     const blogListContainer = document.getElementById("blog-list");
     if (!blogListContainer) return;
