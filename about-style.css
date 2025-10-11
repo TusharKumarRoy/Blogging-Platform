@@ -176,7 +176,7 @@
     word-break: break-all;
 }
 
-/* Team Member Image Hover Overlay */
+
 .member a {
     position: relative;
     display: inline-block;
@@ -207,30 +207,27 @@
     bottom: -8px;
 }
 
-/* ...existing code... */
 
-/* === THEME: Dark mode overrides for About page === */
-/* These styles apply when theme.js sets data-theme="dark" on <html>. */
 html[data-theme="dark"] .about-section {
-    /* THEME: lighten main card a bit and add subtle border to avoid flat dark look */
+    
     background: linear-gradient(180deg, rgba(19, 28, 48, 0.82), rgba(11, 18, 32, 0.78));
     box-shadow: 0 8px 26px rgba(0,0,0,0.42);
     border: 1px solid color-mix(in oklab, var(--accent) 12%, transparent);
 }
 html[data-theme="dark"] .about-section h1,
 html[data-theme="dark"] .about-section h2 {
-    /* Headings use light text color */
+    
     color: var(--link);
 }
 html[data-theme="dark"] .about-section .desc,
 html[data-theme="dark"] .features {
-    /* Body text slightly brighter for readability */
-    color: #d5e3ee; /* light slate */
+    
+    color: #d5e3ee; 
 }
-/* Accented list bullets for contrast/visual interest */
+
 html[data-theme="dark"] .features li::marker { color: var(--accent); }
 html[data-theme="dark"] .member {
-    /* Slightly lighter surface than the main card to create elevation levels */
+
     background: rgba(27, 40, 70, 0.72);
     box-shadow: 0 4px 18px rgba(0,0,0,0.34);
     border: 1px solid color-mix(in oklab, var(--accent) 16%, transparent);
@@ -240,14 +237,14 @@ html[data-theme="dark"] .member p { color: #c7d6e5; }
 html[data-theme="dark"] .member img { border-color: var(--accent); }
 
 html[data-theme="dark"] .contact {
-    /* Slightly different tone so sections don't blend together */
+
     background: rgba(24, 36, 64, 0.7);
     box-shadow: 0 2px 12px rgba(0,0,0,0.33);
     border: 1px solid color-mix(in oklab, var(--accent) 14%, transparent);
 }
 html[data-theme="dark"] .contact a { color: var(--link); }
 
-/* Hover chip below avatar should match dark styling */
+
 html[data-theme="dark"] .member a::after {
     background: color-mix(in oklab, var(--accent) 85%, #0b1220);
 }
