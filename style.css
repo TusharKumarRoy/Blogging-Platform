@@ -62,19 +62,21 @@
 }
 .read-more {
     margin-top: 0.7rem;
-    background: #4a7c59;
+    background: linear-gradient(135deg, #4a7c59, #2d5a3d);
     color: white;
-    padding: 0.5rem 1.1rem;
-    border-radius: 7px;
+    padding: 0.55rem 1.15rem;
+    border-radius: 9px;
     text-decoration: none;
     font-weight: 500;
     align-self: flex-start;
-    font-size: 0.95rem;
-    transition: background 0.3s;
+    font-size: 0.96rem;
+    transition: transform 0.2s ease, background 0.3s ease, box-shadow 0.2s ease;
 }
 .read-more:hover {
     background: #90ee90;
     color: #2d5a3d;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(144, 238, 144, 0.35);
 }
 
 /* Responsive tweaks */
@@ -97,4 +99,10 @@ html[data-theme="dark"] .blog-card p{ color:#a7c0d4; }
 html[data-theme="dark"] .read-more{
     background: linear-gradient(135deg, #4ade80 0%, #15803d 100%);
     color: #fff;
+}
+
+html[data-theme="dark"] .read-more:hover{
+    background: color-mix(in oklab, var(--accent) 85%, #ffffff 0%);
+    color:#0b1220;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.35);
 }
