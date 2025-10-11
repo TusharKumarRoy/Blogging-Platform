@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +7,8 @@
     <link rel="stylesheet" href="base.css">
     <link rel="stylesheet" href="about-style.css">
 </head>
-
 <body>
-     
+    <!-- Header -->
     <header class="header">
         <nav class="navbar">
             <div class="logo">OpenBlogs</div>
@@ -19,55 +17,70 @@
                 <span></span>
                 <span></span>
             </div>
+
             <ul class="nav-links nav-center">
                 <li><a href="index.html">Home</a></li>
+                <li class="nav-category">
+                    <select id="category-select" aria-label="Filter by category">
+                        <option value="All">All Categories</option>
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="CSS & Design">CSS & Design</option>
+                        <option value="Web Development">Web Development</option>
+                        <option value="Design">Design</option>
+                        <option value="TypeScript">TypeScript</option>
+                        <option value="Productivity">Productivity</option>
+                        <option value="Accessibility">Accessibility</option>
+                        <option value="Deployment">Deployment</option>
+                    </select>
+                </li>
                 <li><a href="about.html" class="active">About</a></li>
+                <!-- Theme Toggle Button (Light/Dark) -->
+                <li class="theme-toggle"><button id="theme-toggle" aria-label="Toggle theme">🌙</button></li>
             </ul>
         </nav>
     </header>
 
-     
+    <!-- Main Content Area -->
     <main class="main-content">
         <section class="about-section">
             <h1>About OpenBlogs</h1>
             <p class="desc">
-                OpenBlogs is a tech-focused blogging platform where innovation meets insight. It’s a space dedicated to developers, tech enthusiasts, and learners who want to stay ahead in the digital world. From coding tutorials and software guides to the latest updates in technology and frameworks, OpenBlogs delivers high-quality content curated by experts. Whether you're sharpening your coding skills or exploring emerging tech trends, OpenBlogs is your go-to source for all things tech.
+                OpenBlogs is a modern, clean, and responsive blogging platform built for web enthusiasts, developers, and designers. Our mission is to share high-quality articles, tutorials, and resources on web development, design, and technology trends.
             </p>
             <h2>What You'll Find Here</h2>
             <ul class="features">
-                <li>In-depth tutorials on programming languages like JavaScript, Python, and C++</li>
-                <li>Guides on web development, app building, and software engineering</li>
-                <li>Insights into the latest tech trends, tools, and frameworks</li>
-                <li>Tips for developers on productivity, debugging, and clean coding practices</li>
-                <li>Articles that keep you updated with innovations in the tech world</li>
+                <li>In-depth tutorials on JavaScript, CSS, HTML, and modern frameworks</li>
+                <li>Tips for productivity, accessibility, and responsive design</li>
+                <li>Latest trends in web development and deployment</li>
+                <li>Resources for beginners and experienced developers alike</li>
             </ul>
             <h2>Meet the Team</h2>
 
 
 
             <div class="team">
-                <div class="member">
-                    <a href="https://tusharkumarroy.dev/" target="_blank" style="display:inline-block;">
-                        <img src="img/developers/tushar.jpg" alt="Tushar Kumar Roy">
-                    </a>
-                    <h3>Tushar Kumar Roy</h3>
-                    <p>Frontend Developer</p>
-                </div>
-                <div class="member">
-                    <a href="#" target="_blank" style="display:inline-block;">
-                        <img src="img/developers/shahriar.jpg" alt="Shahriar Aziz Khan">
-                    </a>
-                    <h3>Shahriar Aziz Khan</h3>
-                    <p>Frontend Developer</p>
-                </div>
-                <div class="member">
-                    <a href="#" target="_blank" style="display:inline-block;">
-                        <img src="img/developers/rafi.jpg" alt="Arman Rahman Rafi">
-                    </a>
-                    <h3>Arman Rahman Rafi</h3>
-                    <p>Backend Developer</p>
-                </div>
-            </div>
+    <div class="member">
+        <a href="https://tusharkumarroy.dev/" target="_blank" style="display:inline-block;">
+            <img src="img/developers/tushar.jpg" alt="Tushar Kumar Roy">
+        </a>
+        <h3>Tushar Kumar Roy</h3>
+        <p>Frontend Developer</p>
+    </div>
+    <div class="member">
+        <a href="#" target="_blank" style="display:inline-block;">
+            <img src="img/developers/shahriar.jpg" alt="Shahriar Aziz Khan">
+        </a>
+        <h3>Shahriar Aziz Khan</h3>
+        <p>Frontend Developer</p>
+    </div>
+    <div class="member">
+        <a href="#" target="_blank" style="display:inline-block;">
+            <img src="img/developers/rafi.jpg" alt="Arman Rahman Rafi">
+        </a>
+        <h3>Arman Rahman Rafi</h3>
+        <p>Backend Developer</p>
+    </div>
+</div>
 
 
 
@@ -75,41 +88,38 @@
             <div class="contact">
                 <p>Email: <a href="mailto:contact@OpenBlogs.com">contact@OpenBlogs.com</a></p>
                 <p>Twitter: <a href="https://twitter.com/OpenBlogs" target="_blank">@OpenBlogs</a></p>
-                <p>GitHub: <a href="https://github.com/TusharKumarRoy/Blogging-Platform"
-                        target="_blank">TusharKumarRoy/Blogging-Platform</a></p>
+                <p>GitHub: <a href="https://github.com/TusharKumarRoy/Blogging-Platform" target="_blank">TusharKumarRoy/Blogging-Platform</a></p>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer class="footer mega-footer">
-        <div class="footer-container">
-            <div class="footer-col brand-col">
-                <div class="footer-logo">OpenBlogs</div>
+        <footer class="footer mega-footer">
+            <div class="footer-container">
+                <div class="footer-col brand-col">
+                    <div class="footer-logo">OpenBlogs</div>
+                </div>
+                <div class="footer-col">
+                    <div class="footer-title">BLOG</div>
+                    <a href="index.html">All Blogs</a>
+                    <a href="#">Popular Posts</a>
+                    
+                </div>
+                <div class="footer-col">
+                    <div class="footer-title">RESOURCES</div>
+                    <a href="about.html">About</a>
+                    <a href="#">Community</a>
+                </div>
+                <div class="footer-col">
+                    <div class="footer-title">COMPANY</div>
+                    <a href="#">Terms & Conditions</a>
+                   
+                </div>
             </div>
-            <div class="footer-col">
-                <div class="footer-title">BLOG</div>
-                <a href="index.html">All Blogs</a>
-                <a href="#">Categories</a>
-                <a href="#">Popular Posts</a>
-            </div>
-            <div class="footer-col">
-                <div class="footer-title">RESOURCES</div>
-                <a href="about.html">About</a>
-                <a href="#">Community</a>
-                <a href="#">Support</a>
-            </div>
-            <div class="footer-col">
-                <div class="footer-title">COMPANY</div>
-                <a href="#">Terms & Conditions</a>
-                <a href="#">Privacy Policy</a>
-                <a href="#">GitHub</a>
-                
-            </div>
-        </div>
-        <div class="footer-copyright">© 2025 OpenBlogs | All rights reserved.</div>
-    </footer>
+            <div class="footer-copyright">© 2025 OpenBlogs | All rights reserved.</div>
+        </footer>
 
+    <script src="theme.js"></script>
     <script>
         // Mobile menu toggle function
         function toggleMenu() {
@@ -123,7 +133,21 @@
                 document.querySelector('.nav-links').classList.remove('active');
             });
         });
+
+        // Category select -> navigate to index with filter
+        (function(){
+            const select = document.getElementById('category-select');
+            if (!select) return;
+            const params = new URLSearchParams(window.location.search);
+            const current = params.get('category') || 'All';
+            select.value = current;
+            select.addEventListener('change', () => {
+                const val = select.value;
+                const url = new URL(window.location.origin + window.location.pathname.replace('about.html','index.html'));
+                if (val && val !== 'All') url.searchParams.set('category', val);
+                window.location.href = url.toString();
+            });
+        })();
     </script>
 </body>
-
 </html>
