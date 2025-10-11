@@ -84,7 +84,7 @@ function renderBlogList() {
     const currentCategory = getQueryParam('category');
     const filtered = !currentCategory || currentCategory === 'All' ? blogs : blogs.filter(b => b.category === currentCategory);
 
-    blogs.forEach(blog => {
+    filtered.forEach(blog => {
         const card = document.createElement("div");
         card.className = "blog-card";
         card.innerHTML = `
@@ -105,8 +105,9 @@ function renderBlogList() {
     });
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-     const select = document.getElementById('category-select');
+    document.addEventListener('DOMContentLoaded', function() {
+        // set select from query param if present
+        const select = document.getElementById('category-select');
         const currentCategory = getQueryParam('category') || 'All';
         if (select) {
             select.value = currentCategory;
@@ -121,6 +122,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 window.location.href = url.toString();
             });
         }
-    renderBlogList();
 
-});
+        renderBlogList();
+    });
