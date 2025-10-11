@@ -81,6 +81,9 @@ function renderBlogList() {
 
     blogListContainer.innerHTML = '';
 
+    const currentCategory = getQueryParam('category');
+    const filtered = !currentCategory || currentCategory === 'All' ? blogs : blogs.filter(b => b.category === currentCategory);
+
     blogs.forEach(blog => {
         const card = document.createElement("div");
         card.className = "blog-card";
