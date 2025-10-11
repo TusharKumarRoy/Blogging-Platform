@@ -1,22 +1,27 @@
 
 :root{
-   
-    --bg: linear-gradient(135deg, #f0f8f5 0%, #e8f5e8 100%);
+    
+    --bg: linear-gradient(135deg, #f8fbff 0%, #eaf6ff 100%);
     --text: #2d5a3d;
-    --header-grad: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-    --menu-grad: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    
+    --header-grad: linear-gradient(135deg, #eaf6ff 0%, #cbe3f7 100%);
+    --menu-grad: linear-gradient(135deg, #eaf6ff 0%, #cbe3f7 100%);
     --accent: #38bdf8; /* cyan */
-    --card-shadow: rgba(45, 90, 61, 0.2);
-    --footer-bg: #0b1220;
-    --link: #f5f5fa;
+    --card-shadow: rgba(45, 90, 61, 0.12);
+  
+    --footer-bg: #dbeafe;
+    --footer-text: #23405a;
+    --footer-link: #23405a;
+    --header-text: #23405a;
+    --link: #2d5a3d;
 }
 [data-theme="dark"]{
-
+ 
     --bg: linear-gradient(135deg, #0b1020 0%, #0f1628 100%);
     --text: #dbeafe;
     --header-grad: linear-gradient(135deg, #0b1220 0%, #0f172a 100%);
     --menu-grad: linear-gradient(135deg, #0b1220 0%, #0f172a 100%);
-    --accent: #90ee90; /* mint accent in dark */
+    --accent: #90ee90; 
     --card-shadow: rgba(0,0,0,0.35);
     --footer-bg: #060914;
     --link: #e2e8f0;
@@ -26,7 +31,7 @@
 .mega-footer {
     
     background: var(--footer-bg);
-    color: #f5f5fa;
+    color: var(--footer-text); 
     padding: 3rem 0 2rem 0;
     font-size: 1rem;
     margin-top: 3rem;
@@ -36,7 +41,6 @@
     flex-wrap: wrap;
     max-width: 1200px;
     margin: 0 auto;
-    gap: 2.5rem;
     justify-content: space-between;
 }
 .footer-col {
@@ -60,32 +64,31 @@
     display: block;
     font-size: 0.9rem;
     font-weight: 400;
-    color: #bdbdcf;
-    margin-top: 0.3rem;
+    color: #3b5b7a;
     letter-spacing: 0.5px;
 }
 .footer-title {
     font-size: 1.05rem;
     font-weight: 700;
-    color: #bdbdcf;
+    color: #3b5b7a;
     margin-bottom: 1.1rem;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
 .footer-col a {
     display: block;
-    color: #f5f5fa;
+    color: var(--footer-link); /* Higher contrast for light mode */
     text-decoration: none;
     margin-bottom: 0.7rem;
     transition: color 0.2s;
     font-size: 1rem;
 }
 .footer-col a:hover {
-    
+    /* Theme: link hover uses accent */
     color: var(--accent);
 }
 .footer-copyright {
-    color: #bdbdcf;
+    color: #3b5b7a;
     font-size: 0.98rem;
     margin-bottom: 1.2rem;
     margin-top: 2.5rem;
@@ -186,11 +189,14 @@ body {
     align-items: center;
     justify-content: center;
     padding: 1rem 5%;
-    color: white;
+    color: var(--footer-text); 
     position: relative;
     min-height: 70px;
 }
 .logo {
+    color: var(--footer-text);
+    font-weight: 900;
+    text-shadow: 0 1px 2px rgba(255,255,255,0.12);
     font-size: 1.7rem;
     font-weight: 700;
     letter-spacing: -0.5px;
@@ -210,10 +216,11 @@ body {
     left: 0;
 }
 .nav-links a {
-    color: white;
+    color: var(--footer-text);
+    text-shadow: 0 1px 2px rgba(255,255,255,0.12);
     text-decoration: none;
     transition: all 0.3s ease;
-    font-weight: 600;
+    font-weight: 800;
     font-size: 1.22rem;
     padding: 0.5rem 1.2rem;
     border-radius: 6px;
@@ -228,14 +235,18 @@ body {
 
 .nav-category select{
     background: rgba(255,255,255,0.12);
-    color:#fff;
-    border:1px solid rgba(255,255,255,0.25);
+    color: var(--footer-text); 
+    border:1px solid rgba(35,64,90,0.25);
     padding:0.4rem 0.6rem;
     border-radius:6px;
     font-weight:600;
     font-size:1rem;
 }
 .nav-category select option{ color:#1a3323; }
+
+.nav-category select option {
+    color: var(--footer-text);
+}
 
 
 .hamburger {
@@ -273,7 +284,7 @@ body {
         left: -100%;
         width: 100%;
         height: calc(100vh - 70px);
-    
+
     background: var(--menu-grad);
         flex-direction: column;
         justify-content: flex-start;
@@ -301,14 +312,14 @@ body {
         font-size: 1.1rem;
         border-bottom: 1px solid rgba(255,255,255,0.1);
     }
-    
+
     .nav-category{ width:100%; display:flex; justify-content:center; }
     .nav-category select{
         width: 90%;
         margin: .75rem auto;
         display:block;
-        text-align: center;               
-        text-align-last: center;          
+        text-align: center;            
+        text-align-last: center;       
         -moz-text-align-last: center;     
     }
     .nav-category select option{ text-align: center; }
@@ -413,7 +424,9 @@ body {
     }
 }
 
+/* .footer is now handled by .mega-footer for all pages */
 
+/* === THEME: Toggle button styling === */
 .theme-toggle button{
     background: transparent;
     border: 1px solid rgba(255,255,255,0.35);
