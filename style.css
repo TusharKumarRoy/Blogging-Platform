@@ -76,3 +76,25 @@
     background: #90ee90;
     color: #2d5a3d;
 }
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+    .blog-card img { height: 140px; }
+    .blog-list { gap: 1.2rem; }
+}
+/* ...existing code... */
+
+/* === THEME: Dark mode overrides for Home page cards === */
+/* Applies when theme.js sets data-theme="dark" on <html> */
+html[data-theme="dark"] .blog-card{
+    background: rgba(15,23,42,0.70); /* deep navy glass */
+    border-color: color-mix(in oklab, var(--accent) 28%, transparent);
+    box-shadow: 0 10px 28px rgba(0,0,0,0.38);
+}
+html[data-theme="dark"] .blog-card .meta{ color:#93c5fd; }
+html[data-theme="dark"] .blog-card h2{ color: var(--link); }
+html[data-theme="dark"] .blog-card p{ color:#a7c0d4; }
+html[data-theme="dark"] .read-more{
+    background: linear-gradient(135deg, #4ade80 0%, #15803d 100%);
+    color: #fff;
+}
