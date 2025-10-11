@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OpenBlogs - Home</title>
+    <title>Blog Details</title>
     <link rel="stylesheet" href="base.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="blog-style.css">
 </head>
 <body>
     <!-- Header -->
@@ -17,32 +17,22 @@
                 <span></span>
                 <span></span>
             </div>
-            <!-- Theme: category select remains; added theme toggle button at the end -->
             <ul class="nav-links nav-center">
                 <li><a href="index.html">Home</a></li>
-                <li class="nav-category">
-                    <select id="category-select" aria-label="Filter by category">
-                        <option value="All">All Categories</option>
-                        <option value="JavaScript">JavaScript</option>
-                        <option value="CSS & Design">CSS & Design</option>
-                        <option value="Web Development">Web Development</option>
-                        <option value="Design">Design</option>
-                        <option value="TypeScript">TypeScript</option>
-                        <option value="Productivity">Productivity</option>
-                        <option value="Accessibility">Accessibility</option>
-                        <option value="Deployment">Deployment</option>
-                    </select>
-                </li>
                 <li><a href="about.html">About</a></li>
-                <!-- Theme Toggle Button (Light/Dark) -->
-                <li class="theme-toggle"><button id="theme-toggle" aria-label="Toggle theme">🌙</button></li>
             </ul>
         </nav>
     </header>
 
     <!-- Main Content Area -->
     <main class="main-content">
-        <section class="blog-list" id="blog-list"></section>
+        <!-- Blog Details Section -->
+        <section class="blog-details" id="blog-details"></section>
+        <!-- Related Blogs Section -->
+        <section class="related-blogs-section">
+            <h2 class="section-title">Blogs You May Like</h2>
+            <div class="related-blogs" id="related-blogs">Related Blogs Appear Here</div>
+        </section>
     </main>
 
     <!-- Footer -->
@@ -53,13 +43,17 @@
                 </div>
                 <div class="footer-col">
                     <div class="footer-title">BLOG</div>
-                    <a href="blog.html">All Blogs</a>
+                    <a href="index.html">All Blogs</a>
+                    <a href="#">Categories</a>
                     <a href="#">Popular Posts</a>
+
                 </div>
                 <div class="footer-col">
                     <div class="footer-title">RESOURCES</div>
                     <a href="about.html">About</a>
+
                     <a href="#">Community</a>
+                    <a href="#">Support</a>
                 </div>
                 <div class="footer-col">
                     <div class="footer-title">COMPANY</div>
@@ -70,9 +64,8 @@
             </div>
             <div class="footer-copyright">© 2025 OpenBlogs | All rights reserved.</div>
         </footer>
-    <!-- Theme: include theme script to manage light/dark state -->
-    <script src="theme.js"></script>
-    <script src="script.js"></script>
+    
+    <script src="blog-script.js"></script>
     <script>
         // Mobile menu toggle function
         function toggleMenu() {
@@ -80,7 +73,7 @@
             navLinks.classList.toggle('active');
         }
         
-        // Close mobile menu when clicking on a link
+        // Close mobile menu when a link is clicked
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 document.querySelector('.nav-links').classList.remove('active');

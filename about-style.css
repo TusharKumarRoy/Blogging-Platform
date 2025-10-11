@@ -1,0 +1,207 @@
+
+.about-section {
+    max-width: 950px;
+    margin: 3rem auto;
+    background: rgba(255,255,255,0.97);
+    border-radius: 22px;
+    box-shadow: 0 6px 24px rgba(45,90,61,0.12);
+    padding: 3.5rem 3rem 2.5rem 3rem;
+}
+.about-section h1 {
+    font-size: 2.3rem;
+    color: #2d5a3d;
+    font-weight: 800;
+    margin-bottom: 1.2rem;
+}
+.about-section .desc {
+    font-size: 1.1rem;
+    color: #4a7c59;
+    margin-bottom: 1.5rem;
+}
+.about-section h2 {
+    font-size: 1.3rem;
+    color: #2d5a3d;
+    font-weight: 700;
+    margin-bottom: 0.7rem;
+    margin-top: 2rem;
+}
+.features {
+    color: #2d5a3d;
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+    padding-left: 1.2rem;
+}
+.features li {
+    margin-bottom: 0.5rem;
+}
+.team {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f0f8f5;
+    border-radius: 18px;
+    padding: 2rem 2rem;
+    box-shadow: 0 2px 12px rgba(45,90,61,0.08);
+    min-width: 220px;
+    max-width: 300px;
+    flex: 1 1 280px;
+}
+.member img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #90ee90;
+    margin-bottom: 0.9rem;
+}
+
+.member h3 {
+    margin: 0 0 0.4rem 0;
+    font-size: 1.18rem;
+    color: #2d5a3d;
+    font-weight: 700;
+    text-align: center;
+    word-break: break-word;
+}
+
+.member p {
+    margin: 0;
+    color: #4a7c59;
+    font-size: 1.08rem;
+    text-align: center;
+}
+.contact {
+    background: #f0f8f5;
+    border-radius: 10px;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 2px 8px rgba(45,90,61,0.06);
+    margin-top: 1.2rem;
+}
+.contact a {
+    color: #2d5a3d;
+    text-decoration: underline;
+    word-break: break-all;
+}
+
+.member a {
+    position: relative;
+    display: inline-block;
+}
+
+.member a::after {
+    content: "Learn More";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(45,90,61,0.9);
+    color: #fff;
+    padding: 0.3em 0.8em;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, bottom 0.3s ease;
+    white-space: nowrap;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(45,90,61,0.3);
+}
+
+.member a:hover::after {
+    opacity: 1;
+    bottom: -8px;
+}
+
+/* Team Section Responsive Styles */
+@media (min-width: 927px) {
+    .team {
+        flex-wrap: nowrap;
+        gap: 2.5rem;
+        justify-content: center;
+    }
+    
+    .member {
+        flex: 1 1 0;
+        max-width: 320px;
+        padding: 2rem 2.5rem;
+    }
+}
+
+@media (max-width: 926px) and (min-width: 769px) {
+    .team {
+        gap: 1.8rem;
+        max-width: 900px;
+        margin: 0 auto 2.5rem auto;
+    }
+    
+    .member {
+        flex: 1 1 250px;
+        max-width: 280px;
+        padding: 1.8rem 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .team {
+        gap: 1.5rem;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .member {
+        flex: none;
+        width: 100%;
+        max-width: 400px;
+        padding: 2rem 1.5rem;
+    }
+    
+    .member img {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 1.2rem;
+    }
+    
+    .member h3 {
+        font-size: 1.3rem;
+        margin-bottom: 0.6rem;
+    }
+    
+    .member p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .team {
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .member {
+        padding: 1.5rem 1rem;
+        border-radius: 12px;
+    }
+    
+    .member img {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 1rem;
+    }
+    
+    .member h3 {
+        font-size: 1.2rem;
+    }
+    
+    .member p {
+        font-size: 1rem;
+    }
+}
