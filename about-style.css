@@ -1,4 +1,4 @@
-
+/* ...existing code... */
 .about-section {
     max-width: 950px;
     margin: 3rem auto;
@@ -53,72 +53,6 @@
     min-width: 220px;
     max-width: 300px;
     flex: 1 1 280px;
-}
-.member img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #90ee90;
-    margin-bottom: 0.9rem;
-}
-
-.member h3 {
-    margin: 0 0 0.4rem 0;
-    font-size: 1.18rem;
-    color: #2d5a3d;
-    font-weight: 700;
-    text-align: center;
-    word-break: break-word;
-}
-
-.member p {
-    margin: 0;
-    color: #4a7c59;
-    font-size: 1.08rem;
-    text-align: center;
-}
-.contact {
-    background: #f0f8f5;
-    border-radius: 10px;
-    padding: 1rem 1.5rem;
-    box-shadow: 0 2px 8px rgba(45,90,61,0.06);
-    margin-top: 1.2rem;
-}
-.contact a {
-    color: #2d5a3d;
-    text-decoration: underline;
-    word-break: break-all;
-}
-
-.member a {
-    position: relative;
-    display: inline-block;
-}
-
-.member a::after {
-    content: "Learn More";
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(45,90,61,0.9);
-    color: #fff;
-    padding: 0.3em 0.8em;
-    border-radius: 12px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease, bottom 0.3s ease;
-    white-space: nowrap;
-    z-index: 10;
-    box-shadow: 0 2px 8px rgba(45,90,61,0.3);
-}
-
-.member a:hover::after {
-    opacity: 1;
-    bottom: -8px;
 }
 
 /* Team Section Responsive Styles */
@@ -204,4 +138,113 @@
     .member p {
         font-size: 1rem;
     }
+}
+.member img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #90ee90;
+    margin-bottom: 0.9rem;
+}
+
+.member h3 {
+    margin: 0 0 0.4rem 0;
+    font-size: 1.18rem;
+    color: #2d5a3d;
+    font-weight: 700;
+    text-align: center;
+    word-break: break-word;
+}
+
+.member p {
+    margin: 0;
+    color: #4a7c59;
+    font-size: 1.08rem;
+    text-align: center;
+}
+.contact {
+    background: #f0f8f5;
+    border-radius: 10px;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 2px 8px rgba(45,90,61,0.06);
+    margin-top: 1.2rem;
+}
+.contact a {
+    color: #2d5a3d;
+    text-decoration: underline;
+    word-break: break-all;
+}
+
+
+.member a {
+    position: relative;
+    display: inline-block;
+}
+
+.member a::after {
+    content: "Learn More";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(45,90,61,0.9);
+    color: #fff;
+    padding: 0.3em 0.8em;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, bottom 0.3s ease;
+    white-space: nowrap;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(45,90,61,0.3);
+}
+
+.member a:hover::after {
+    opacity: 1;
+    bottom: -8px;
+}
+
+
+html[data-theme="dark"] .about-section {
+    
+    background: linear-gradient(180deg, rgba(19, 28, 48, 0.82), rgba(11, 18, 32, 0.78));
+    box-shadow: 0 8px 26px rgba(0,0,0,0.42);
+    border: 1px solid color-mix(in oklab, var(--accent) 12%, transparent);
+}
+html[data-theme="dark"] .about-section h1,
+html[data-theme="dark"] .about-section h2 {
+    
+    color: var(--link);
+}
+html[data-theme="dark"] .about-section .desc,
+html[data-theme="dark"] .features {
+    
+    color: #d5e3ee; 
+}
+
+html[data-theme="dark"] .features li::marker { color: var(--accent); }
+html[data-theme="dark"] .member {
+
+    background: rgba(27, 40, 70, 0.72);
+    box-shadow: 0 4px 18px rgba(0,0,0,0.34);
+    border: 1px solid color-mix(in oklab, var(--accent) 16%, transparent);
+}
+html[data-theme="dark"] .member h3 { color: var(--link); }
+html[data-theme="dark"] .member p { color: #c7d6e5; }
+html[data-theme="dark"] .member img { border-color: var(--accent); }
+
+html[data-theme="dark"] .contact {
+
+    background: rgba(24, 36, 64, 0.7);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.33);
+    border: 1px solid color-mix(in oklab, var(--accent) 14%, transparent);
+}
+html[data-theme="dark"] .contact a { color: var(--link); }
+
+
+html[data-theme="dark"] .member a::after {
+    background: color-mix(in oklab, var(--accent) 85%, #0b1220);
 }

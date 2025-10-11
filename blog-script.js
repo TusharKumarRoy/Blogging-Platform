@@ -1,4 +1,3 @@
-// Sample blog data
 const blogs = [
     {
         id: 1,
@@ -6,7 +5,7 @@ const blogs = [
         publishedAt: "2025-10-08",
         category: "JavaScript",
         intro: "Discover the latest techniques and best practices for creating dynamic, responsive web applications using modern JavaScript frameworks and libraries.",
-        content: "JavaScript continues to evolve as the backbone of modern web development. In this comprehensive guide, we'll explore the latest ES2025 features, advanced async/await patterns, and how to leverage modern frameworks like React, Vue, and Angular to build scalable applications. We'll also dive into performance optimization techniques, state management patterns, and the importance of writing maintainable, testable code. Whether you're a beginner or an experienced developer, these insights will help you stay ahead in the rapidly evolving web development landscape.",
+        content: "JavaScript continues to evolve as the backbone of modern web development. In this comprehensive guide, we'll explore the latest ES2025 features, advanced async/await patterns, and how to leverage modern frameworks like React, Vue, and Angular to build scalable applications. We'll also dive into performance optimization techniques, state management patterns, and the importance of writing maintainable, testable code.",
         image: "https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=800&h=400&fit=crop"
     },
     {
@@ -74,20 +73,17 @@ const blogs = [
     }
 ];
 
- 
 function formatDate(dateStr) {
     const options = { year: "numeric", month: "short", day: "numeric" };
     return new Date(dateStr).toLocaleDateString(undefined, options);
 }
 
- 
 function getBlogId() {
     const params = new URLSearchParams(window.location.search);
     let id = parseInt(params.get("id"));
     return (id && !isNaN(id)) ? id : 1;
 }
 
-// Render blog details
 function renderBlogDetails() {
     const blogDetailsContainer = document.getElementById("blog-details");
     if (!blogDetailsContainer) return;
@@ -114,7 +110,6 @@ function renderBlogDetails() {
     }
 }
 
-// Render related blogs
 function renderRelatedBlogs() {
     const relatedContainer = document.getElementById("related-blogs");
     if (!relatedContainer) return;
@@ -135,22 +130,18 @@ function renderRelatedBlogs() {
                 <p>${blog.intro}</p>
             </div>
         `;
-        
         card.addEventListener('click', () => {
             window.location.href = `blog.html?id=${blog.id}`;
         });
-        
         relatedContainer.appendChild(card);
     });
 }
 
-// Initialize the page
 document.addEventListener('DOMContentLoaded', function() {
     renderBlogDetails();
     renderRelatedBlogs();
 });
 
-// Update page title based on current blog
 function updatePageTitle() {
     const id = getBlogId();
     const blog = blogs.find(b => b.id === id);
@@ -158,6 +149,4 @@ function updatePageTitle() {
         document.title = `${blog.title} - MyPremiumBlog`;
     }
 }
-
-// Call function to update title
 updatePageTitle();
