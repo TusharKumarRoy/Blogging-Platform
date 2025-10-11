@@ -17,9 +17,25 @@
                 <span></span>
                 <span></span>
             </div>
+            <!-- Theme: category select remains; added theme toggle button at the end -->
             <ul class="nav-links nav-center">
                 <li><a href="index.html">Home</a></li>
+                <li class="nav-category">
+                    <select id="category-select" aria-label="Filter by category">
+                        <option value="All">All Categories</option>
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="CSS & Design">CSS & Design</option>
+                        <option value="Web Development">Web Development</option>
+                        <option value="Design">Design</option>
+                        <option value="TypeScript">TypeScript</option>
+                        <option value="Productivity">Productivity</option>
+                        <option value="Accessibility">Accessibility</option>
+                        <option value="Deployment">Deployment</option>
+                    </select>
+                </li>
                 <li><a href="about.html">About</a></li>
+                <!-- Theme Toggle Button (Light/Dark) -->
+                <li class="theme-toggle"><button id="theme-toggle" aria-label="Toggle theme">🌙</button></li>
             </ul>
         </nav>
     </header>
@@ -38,14 +54,12 @@
                 <div class="footer-col">
                     <div class="footer-title">BLOG</div>
                     <a href="blog.html">All Blogs</a>
-                    <a href="#">Categories</a>
                     <a href="#">Popular Posts</a>
                 </div>
                 <div class="footer-col">
                     <div class="footer-title">RESOURCES</div>
                     <a href="about.html">About</a>
                     <a href="#">Community</a>
-                    <a href="#">Support</a>
                 </div>
                 <div class="footer-col">
                     <div class="footer-title">COMPANY</div>
@@ -56,6 +70,8 @@
             </div>
             <div class="footer-copyright">© 2025 OpenBlogs | All rights reserved.</div>
         </footer>
+    <!-- Theme: include theme script to manage light/dark state -->
+    <script src="theme.js"></script>
     <script src="script.js"></script>
     <script>
         // Mobile menu toggle function

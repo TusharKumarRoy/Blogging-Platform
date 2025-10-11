@@ -70,13 +70,21 @@ function formatDate(dateStr) {
     return new Date(dateStr).toLocaleDateString(undefined, options);
 }
 
+function getQueryParam(key){
+    const params = new URLSearchParams(window.location.search);
+    return params.get(key);
+}
+
 function renderBlogList() {
     const blogListContainer = document.getElementById("blog-list");
     if (!blogListContainer) return;
 
     blogListContainer.innerHTML = '';
 
-    blogs.forEach(blog => {
+    const currentCategory = getQueryParam('category');
+    const filtered = !currentCategory || currentCategory === 'All' ? blogs : blogs.filter(b => b.category === currentCategory);
+
+    filtered.forEach(blog => {
         const card = document.createElement("div");
         card.className = "blog-card";
         card.innerHTML = `
@@ -97,6 +105,23 @@ function renderBlogList() {
     });
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    renderBlogList();
-});
+    document.addEventListener('DOMContentLoaded', function() {
+        // set select from query param if present
+        const select = document.getElementById('category-select');
+        const currentCategory = getQueryParam('category') || 'All';
+        if (select) {
+            select.value = currentCategory;
+            select.addEventListener('change', () => {
+                const value = select.value;
+                const url = new URL(window.location.href);
+                if (value && value !== 'All') {
+                    url.searchParams.set('category', value);
+                } else {
+                    url.searchParams.delete('category');
+                }
+                window.location.href = url.toString();
+            });
+        }
+
+        renderBlogList();
+    });
