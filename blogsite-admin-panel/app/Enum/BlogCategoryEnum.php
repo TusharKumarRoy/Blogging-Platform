@@ -2,7 +2,7 @@
 
 namespace App\Enums;
 
-enum BlogTypeEnum: string
+enum BlogCategoryEnum: string
 {
     case FRONTEND = 'Frontend';
     case BACKEND = 'Backend';

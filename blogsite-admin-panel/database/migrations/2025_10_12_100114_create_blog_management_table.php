@@ -11,12 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('blogs', function (Blueprint $table) {
+        Schema::create('blog_management', function (Blueprint $table) {
             $table->id();
             $table->string('title');
             $table->longText('content')->nullable();
             $table->text('excerpt')->nullable();
-            $table->enum('category', ['Frontend', 'Backend', 'Devops', 'Android', 'IOS','Others'])
+            $table->enum('category', ['Frontend', 'Backend', 'Devops', 'Android', 'IOS', 'Others'])
                   ->default('Others');
             $table->string('featured_image')->nullable();
             $table->date('published_at')->nullable();
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('blogs');
+        Schema::dropIfExists('blog_management');
     }
 };

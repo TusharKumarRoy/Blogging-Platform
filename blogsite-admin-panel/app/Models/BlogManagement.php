@@ -2,13 +2,14 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Blogs extends Model
+class BlogManagement extends Model
 {
-    //
+    use HasFactory;
 
-       protected $fillable = [
+    protected $fillable = [
         'title',
         'content',
         'excerpt',
@@ -16,5 +17,4 @@ class Blogs extends Model
         'featured_image',
         'published_at',
     ];
-    
 }

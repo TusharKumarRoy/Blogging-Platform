@@ -2,24 +2,21 @@
 
 namespace App\Filament\Resources;
 
-use App\Enum\NewsCategoryEnum;
-use App\Enums\BlogTypeEnum;
-use App\Filament\Resources\BlogsResource\Pages;
-use App\Models\Blogs;
+use App\Filament\Resources\BlogManagementResource\Pages;
+use App\Models\BlogManagement;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Illuminate\Support\Str;
 
-class BlogsResource extends Resource
+class BlogManagementResource extends Resource
 {
-    protected static ?string $model = Blogs::class;
+    protected static ?string $model = BlogManagement::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
-    protected static ?string $navigationLabel = 'Blogs';
+    protected static ?string $navigationLabel = 'Blog Management';
 
     public static function form(Form $form): Form
     {
@@ -27,22 +24,22 @@ class BlogsResource extends Resource
             ->schema([
                 Forms\Components\Group::make()
                     ->schema([
-                        Forms\Components\Section::make()
+                        Forms\Components\Section::make('Content')
                             ->schema([
                                 Forms\Components\TextInput::make('title')
                                     ->required()
-                                    ->live(onBlur: true)
+                                    ->maxLength(255)
                                     ->unique(ignoreRecord: true),
 
-                                Forms\Components\TextInput::make('excerpt')
-                                    ->columnSpan('2'),
+                                Forms\Components\Textarea::make('excerpt')
+                                    ->rows(1),
 
                                 Forms\Components\MarkdownEditor::make('content')
                                     ->fileAttachmentsDisk('public')
-                                    ->fileAttachmentsDirectory('body-image')
-                                    ->fileAttachmentsVisibility('public')
-                                    ->columnSpan('2'),
-                            ])->columns('2'),
+                                    ->fileAttachmentsDirectory('blog-content')
+                                    ->fileAttachmentsVisibility('public'),
+                            ])
+                            ->columns(1),
                     ]),
 
                 Forms\Components\Group::make()
@@ -53,13 +50,14 @@ class BlogsResource extends Resource
 
                                 Forms\Components\Select::make('category')
                                     ->options([
-                                        'Frontend' => BlogTypeEnum::FRONTEND->value,
-                                        'Backend' => BlogTypeEnum::BACKEND->value,
-                                        'Devops' => BlogTypeEnum::DEVOPS->value,
-                                        'Android' => BlogTypeEnum::ANDROID->value,
-                                        'IOS' => BlogTypeEnum::IOS->value,
-                                        'Others' => BlogTypeEnum::OTHERS->value,
-                                    ]),
+                                        'Frontend' => 'Frontend',
+                                        'Backend' => 'Backend',
+                                        'Devops' => 'Devops',
+                                        'Android' => 'Android',
+                                        'IOS' => 'IOS',
+                                        'Others' => 'Others',
+                                    ])
+                                    ->default('Others'),
                             ]),
 
                         Forms\Components\Section::make('Image')
@@ -67,11 +65,10 @@ class BlogsResource extends Resource
                                 Forms\Components\FileUpload::make('featured_image')
                                     ->image()
                                     ->disk('public')
-                                    ->preserveFilenames()  // Keep the original file name
+                                    ->preserveFilenames() // keep original name
                                     ->visibility('public')
-                                    ->imageEditor()
-
-                            ])
+                                    ->imageEditor(),
+                            ]),
                     ])
             ]);
     }
@@ -120,9 +117,9 @@ class BlogsResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListBlogs::route('/'),
-            'create' => Pages\CreateBlogs::route('/create'),
-            'edit' => Pages\EditBlogs::route('/{record}/edit'),
+            'index' => Pages\ListBlogManagement::route('/'),
+            'create' => Pages\CreateBlogManagement::route('/create'),
+            'edit' => Pages\EditBlogManagement::route('/{record}/edit'),
         ];
     }
 }
