@@ -16,7 +16,6 @@ return new class extends Migration
             $table->string('title');
             $table->longText('content')->nullable();
             $table->text('excerpt')->nullable();
-            $table->boolean('is_featured')->default(false);
             $table->enum('category', ['Frontend', 'Backend', 'Devops', 'Android', 'IOS','Others'])
                   ->default('Others');
             $table->string('featured_image')->nullable();

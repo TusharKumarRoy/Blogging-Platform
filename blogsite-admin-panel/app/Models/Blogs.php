@@ -12,7 +12,6 @@ class Blogs extends Model
         'title',
         'content',
         'excerpt',
-        'is_featured',
         'category',
         'featured_image',
         'published_at',
