@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>OpenBlogs - Home</title>
-    <link rel="stylesheet" href="base.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="base.css" />
+    <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
     <!-- Header -->
     <header class="header">
@@ -22,20 +24,20 @@
                 <li><a href="index.html">Home</a></li>
                 <li class="nav-category">
                     <select id="category-select" aria-label="Filter by category">
-                        <option value="All">All Categories</option>
-                        <option value="JavaScript">JavaScript</option>
-                        <option value="CSS & Design">CSS & Design</option>
-                        <option value="Web Development">Web Development</option>
-                        <option value="Design">Design</option>
-                        <option value="TypeScript">TypeScript</option>
-                        <option value="Productivity">Productivity</option>
-                        <option value="Accessibility">Accessibility</option>
-                        <option value="Deployment">Deployment</option>
-                    </select>
+              <option value="All">All Categories</option>
+              <option value="Frontend">Frontend</option>
+              <option value="Backend">Backend</option>
+              <option value="Devops">DevOps</option>
+              <option value="Android">Android</option>
+              <option value="IOS">IOS</option>
+              <option value="Others">Others</option>
+            </select>
                 </li>
                 <li><a href="about.html">About</a></li>
                 <!-- Theme Toggle Button (Light/Dark) -->
-                <li class="theme-toggle"><button id="theme-toggle" aria-label="Toggle theme">🌙</button></li>
+                <li class="theme-toggle">
+                    <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
+                </li>
             </ul>
         </nav>
     </header>
@@ -46,46 +48,49 @@
     </main>
 
     <!-- Footer -->
-        <footer class="footer mega-footer">
-            <div class="footer-container">
-                <div class="footer-col brand-col">
-                    <div class="footer-logo">OpenBlogs</div>
-                </div>
-                <div class="footer-col">
-                    <div class="footer-title">BLOG</div>
-                    <a href="blog.html">All Blogs</a>
-                    <a href="#">Popular Posts</a>
-                </div>
-                <div class="footer-col">
-                    <div class="footer-title">RESOURCES</div>
-                    <a href="about.html">About</a>
-                    <a href="#">Community</a>
-                </div>
-                <div class="footer-col">
-                    <div class="footer-title">COMPANY</div>
-                    <a href="#">Terms & Conditions</a>
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">GitHub</a>
-                </div>
+    <footer class="footer mega-footer">
+        <div class="footer-container">
+            <div class="footer-col brand-col">
+                <div class="footer-logo">OpenBlogs</div>
             </div>
-            <div class="footer-copyright">© 2025 OpenBlogs | All rights reserved.</div>
-        </footer>
+            <div class="footer-col">
+                <div class="footer-title">BLOG</div>
+                <a href="blog.html">All Blogs</a>
+                <a href="#">Popular Posts</a>
+            </div>
+            <div class="footer-col">
+                <div class="footer-title">RESOURCES</div>
+                <a href="about.html">About</a>
+                <a href="#">Community</a>
+            </div>
+            <div class="footer-col">
+                <div class="footer-title">COMPANY</div>
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">GitHub</a>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            © 2025 OpenBlogs | All rights reserved.
+        </div>
+    </footer>
     <!-- Theme: include theme script to manage light/dark state -->
     <script src="theme.js"></script>
     <script src="script.js"></script>
     <script>
         // Mobile menu toggle function
         function toggleMenu() {
-            const navLinks = document.querySelector('.nav-links');
-            navLinks.classList.toggle('active');
+            const navLinks = document.querySelector(".nav-links");
+            navLinks.classList.toggle("active");
         }
-        
+
         // Close mobile menu when clicking on a link
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                document.querySelector('.nav-links').classList.remove('active');
+        document.querySelectorAll(".nav-links a").forEach((link) => {
+            link.addEventListener("click", () => {
+                document.querySelector(".nav-links").classList.remove("active");
             });
         });
     </script>
 </body>
+
 </html>
